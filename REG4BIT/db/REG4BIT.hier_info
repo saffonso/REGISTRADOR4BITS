@@ -1,0 +1,95 @@
+|REG4BIT
+I[0] => MUX:M0.d
+I[1] => MUX:M1.d
+I[2] => MUX:M2.d
+I[3] => MUX:M3.d
+sel[0] => MUX:M3.sel[0]
+sel[0] => MUX:M2.sel[0]
+sel[0] => MUX:M1.sel[0]
+sel[0] => MUX:M0.sel[0]
+sel[1] => MUX:M3.sel[1]
+sel[1] => MUX:M2.sel[1]
+sel[1] => MUX:M1.sel[1]
+sel[1] => MUX:M0.sel[1]
+clock => FFD:F3.c
+clock => FFD:F2.c
+clock => FFD:F1.c
+clock => FFD:F0.c
+clear => FFD:F3.reset
+clear => FFD:F2.reset
+clear => FFD:F1.reset
+clear => FFD:F0.reset
+S[0] <= FFD:F0.q
+S[1] <= FFD:F1.q
+S[2] <= FFD:F2.q
+S[3] <= FFD:F3.q
+
+
+|REG4BIT|mux:M3
+a => Mux0.IN0
+b => Mux0.IN1
+c => Mux0.IN2
+d => Mux0.IN3
+sel[0] => Mux0.IN5
+sel[1] => Mux0.IN4
+y <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|REG4BIT|mux:M2
+a => Mux0.IN0
+b => Mux0.IN1
+c => Mux0.IN2
+d => Mux0.IN3
+sel[0] => Mux0.IN5
+sel[1] => Mux0.IN4
+y <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|REG4BIT|mux:M1
+a => Mux0.IN0
+b => Mux0.IN1
+c => Mux0.IN2
+d => Mux0.IN3
+sel[0] => Mux0.IN5
+sel[1] => Mux0.IN4
+y <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|REG4BIT|mux:M0
+a => Mux0.IN0
+b => Mux0.IN1
+c => Mux0.IN2
+d => Mux0.IN3
+sel[0] => Mux0.IN5
+sel[1] => Mux0.IN4
+y <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|REG4BIT|FFD:F3
+c => q~reg0.CLK
+reset => q~reg0.ACLR
+dado => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|REG4BIT|FFD:F2
+c => q~reg0.CLK
+reset => q~reg0.ACLR
+dado => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|REG4BIT|FFD:F1
+c => q~reg0.CLK
+reset => q~reg0.ACLR
+dado => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|REG4BIT|FFD:F0
+c => q~reg0.CLK
+reset => q~reg0.ACLR
+dado => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
